@@ -58,26 +58,31 @@ class Paint(object):
         self.eraser_button = Button(self.root, text='eraser', command=self.use_eraser)
         self.eraser_button.grid(row=3, column=0)
 
-        self.choose_size_button = Scale(self.root, from_=1, to=10, orient=HORIZONTAL)
+        self.choose_size_button = Scale(self.root, from_=1, to=80, orient=HORIZONTAL)
         self.choose_size_button.grid(row=4, column=0)
         
         self.clean_button = Button(self.root, text='clean', command=self.clean)
         self.clean_button.grid(row=5, column=0)
         
+        self.text = Text(self.root, height = 1, width = 20)
+        self.text.grid(row=7, column=0)
+        self.text.insert(CURRENT,"      Style:")
+        
         self.style = StringVar(self.root)
         self.style.set("Van Gogh")
         self.select_menu = OptionMenu(self.root, self.style, "Van Gogh", "Renoir", "Monet")
-        self.select_menu.grid(row=6, column=0)        
+        self.select_menu.grid(row=8, column=0)        
         
         self.transfer_button = Button(self.root, text='transfer', command=self.transfer)
-        self.transfer_button.grid(row=7, column=0)                
+        self.transfer_button.grid(row=6, column=0)                
 
-        self.c = Canvas(self.root, bg='white', width=800, height=600)
+        self.c = Canvas(self.root, bg='white', width=512, height=384)
         self.c.grid(row=2, column = 1, rowspan = 5, columnspan=5)
         
         #  --- PIL
         self.image1 = PIL.Image.new('RGB', (512, 384), 'white')
         self.draw = ImageDraw.Draw(self.image1)
+
 
         self.setup()
         self.root.config(menu=self.menubar)
@@ -127,7 +132,8 @@ class Paint(object):
                                width=self.line_width, fill=paint_color,
                                capstyle=ROUND, smooth=TRUE, splinesteps=36)
             self.draw.line((self.old_x, self.old_y, event.x, event.y), 
-                           fill=paint_color, width=self.line_width)
+                           fill=paint_color, width=self.line_width,
+                           joint='curve')
         self.old_x = event.x
         self.old_y = event.y
 
@@ -167,7 +173,7 @@ class Paint(object):
 
         
     def save(self):
-        filename = f'test_sem.png'   
+        filename = f'target_mask.png'   
         self.image1.save(filename)
             
     def donothing():
