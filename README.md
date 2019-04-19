@@ -20,7 +20,7 @@ python GUI.py
 ### Stylize Doodle
 Use trained model to proecess the doodle.
 ```
-python apply.py --colors Models/Renoir.hdf5colors.npy --target_mask Styles/target_mask.png --model Models/Renoir.t7
+python apply.py --colors Models/Renoir.hdf5_colors.npy --target_mask Styles/target_mask.png --model Models/Renoir.t7
 ```
 
 ## Training 
