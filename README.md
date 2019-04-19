@@ -19,7 +19,7 @@ python GUI.py
 
 ### Prerequisites
 - torch
-  - [torch7](torch-hdf5)
+  - [torch7](http://torch.ch/docs/getting-started.html)
   - [torch.cudnn](https://github.com/soumith/cudnn.torch)
 - python
   - sklearn
@@ -28,4 +28,5 @@ python GUI.py
   - scipy
   - h5py
   - joblib
+  - tkinter
   
