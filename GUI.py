@@ -30,7 +30,7 @@ class Paint(object):
         
         self.text = Text(self.root, height = 1, width = 80)
         self.text.grid(row=0, column=2)
-        self.text.insert(END, "Draw the doodle below and transfer it to Renoir's style")
+        self.text.insert(END, "Draw the doodle below and transfer it to a masterpieces")
         
         self.menubar = Menu(self.root)
         # create a pulldown menu, and add it to the menu bar
@@ -98,7 +98,7 @@ class Paint(object):
     def show_example(self):
         example_win = Toplevel()
         example_win.title("Example")
-        img = ImageTk.PhotoImage(Image.open('target_masks/example.png'))     
+        img = ImageTk.PhotoImage(Image.open('Styles/example.png'))     
         panel = Label(example_win, image = img)
         panel.image = img
         panel.pack(side = "bottom", fill = "both", expand = "yes")
@@ -134,9 +134,6 @@ class Paint(object):
     def transfer(self):
         filename = f'target_mask.png'   
         self.image1.save('Result/'+filename)
-        
-        os.system("git --version")
-        os.system("python3 test.py")
         
         VanGogh_command = "CUDA_VISIBLE_DEVICES=2,3 python apply.py --colors Models/VanGogh.hdf5_colors.npy --target_mask Result/target_mask.png --model Models/VanGogh.t7"
         Renoir_command = "CUDA_VISIBLE_DEVICES=2,3 python apply.py --colors Models/Renoir.hdf5_colors.npy --target_mask Result/target_mask.png --model Models/Renoir.t7"
