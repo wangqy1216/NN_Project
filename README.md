@@ -17,15 +17,28 @@ python GUI.py
 ```
 ![](GUI/GUI.png)
 
+### Stylize Doodle
+Use trained model to proecess the doodle.
+```
+python apply.py --colors Models/Renoir.hdf5colors.npy --target_mask Styles/target_mask.png --model Models/Renoir.t7
+```
+
+## Training 
 ### Generate datasets
+```
+cd Train
+python generate.py --n_jobs 30 --n_colors 4 --style_image style_image_path --style_mask style_image_mask_path --out_hdf5 dataset_path
+```
 
 ### Train the model
-You also need to download VGG-19 recognition network.
+You need to download VGG-19 recognition network.
 ```
-cd d && bash download_models.sh && cd ../..
+cd Train/data/pretrained && bash download_models.sh && cd ../..
 ```
-
-### Stylize Doodles
+Then train the model
+```
+CUDA_VISIBLE_DEVICES=2,3 th feedforward_neural_doodle.lua -model_name skip_noise_4 -masks_hdf5 dataset_path -batch_size 4 -num_mask_noise_times 0 -num_noise_channels 0 -learning_rate 1e-1 -half false
+```
 
 ### Prerequisites
 - torch
