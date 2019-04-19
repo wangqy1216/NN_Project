@@ -9,3 +9,10 @@ src: this folder contains the code that is needed while applying models.
 Styles: this folder contains three original masterpieces and their doodles. The trained models are trained by them. The user can also use them to train new models.
 
 Train: this folder contains all files that are needed to train a new model. 
+
+### GUI
+Simply run
+```
+python GUI.py
+```
+
