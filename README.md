@@ -10,7 +10,7 @@ Styles: this folder contains three original masterpieces and their doodles. The 
 
 Train: this folder contains all files that are needed to train a new model. 
 
-## GUI
+### GUI
 Simply run
 ```
 python GUI.py
