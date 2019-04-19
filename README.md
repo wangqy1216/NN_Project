@@ -17,10 +17,19 @@ python GUI.py
 ```
 ![](GUI/GUI.png)
 
+### Generate datasets
+
+### Train the model
+You also need to download VGG-19 recognition network.
+```
+cd d && bash download_models.sh && cd ../..
+```
+
+### Stylize Doodles
+
 ### Prerequisites
 - torch
   - [torch7](http://torch.ch/docs/getting-started.html)
-  - [torch.cudnn](https://github.com/soumith/cudnn.torch)
 - python
   - sklearn
   - skimage
@@ -29,4 +38,8 @@ python GUI.py
   - h5py
   - joblib
   - tkinter
+The code is tested by Python2.7 and the lasted conda.  
+
   
+## Credits
+The code is based on [Dmitry Ulyanov's code](https://github.com/DmitryUlyanov/online-neural-doodle).
