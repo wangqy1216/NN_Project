@@ -15,4 +15,17 @@ Simply run
 ```
 python GUI.py
 ```
+![](GUI/GUI.png)
 
+### Prerequisites
+- torch
+  - [torch7](torch-hdf5)
+  - [torch.cudnn](https://github.com/soumith/cudnn.torch)
+- python
+  - sklearn
+  - skimage
+  - numpy
+  - scipy
+  - h5py
+  - joblib
+  
