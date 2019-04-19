@@ -33,7 +33,7 @@ python generate.py --n_jobs 30 --n_colors 4 --style_image style_image_path --sty
 ### Train the model
 You need to download VGG-19 recognition network.
 ```
-cd Train/data/pretrained && bash download_models.sh && cd ../..
+cd data/pretrained && bash download_models.sh && cd ../..
 ```
 Then train the model
 ```
