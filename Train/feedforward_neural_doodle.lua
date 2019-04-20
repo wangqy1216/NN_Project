@@ -5,7 +5,7 @@ require 'image'
 require 'optim'
 require 'hdf5'
 
-display = require('display')
+-- display = require('display')
 
 require 'src/utils'
 require 'src/descriptor_net'
@@ -211,8 +211,8 @@ for it = 1, params.num_iterations do
       image.save(params.tmp_path .. 'train' .. i .. '_' .. it .. '.png',img)
     end
 
-    display.image(imgs, {win=1,  title = 'Preview'})
-    display.plot(loss_history, {win=2, labels={'iteration', 'Loss'}, title='Loss'})
+--    display.image(imgs, {win=1,  title = 'Preview'})
+--    display.plot(loss_history, {win=2, labels={'iteration', 'Loss'}, title='Loss'})
   end
   
   if it%300 == 0 then 
