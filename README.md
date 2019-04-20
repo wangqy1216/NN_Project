@@ -66,6 +66,7 @@ CUDA_VISIBLE_DEVICES=2,3 th feedforward_neural_doodle.lua -model_name skip_noise
   - h5py
   - joblib
   - tkinter
+  
 The code is tested by Python2.7 and the lasted conda.  
 
   
