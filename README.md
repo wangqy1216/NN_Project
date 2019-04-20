@@ -15,7 +15,8 @@ Simply run
 ```
 python GUI.py
 ```
-![](GUI/GUI.png)
+![](GUI/target_mask.png)
+![](GUI/result.png)
 
 Here is the [demo](https://youtu.be/fGMBV_mk_LQ) of GUI.
 
