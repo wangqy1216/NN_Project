@@ -55,7 +55,7 @@ Example:
 CUDA_VISIBLE_DEVICES=2,3 th feedforward_neural_doodle.lua -model_name skip_noise_4 -masks_hdf5 Monet.hdf5 -batch_size 4 -num_mask_noise_times 0 -num_noise_channels 0 -learning_rate 1e-1 -half false
 ```
 
-Here is the [demo](https://youtu.be/XZx6ZvSOUw0) of GUI.
+Here is the [demo](https://youtu.be/XZx6ZvSOUw0) of Training.
 
 ### Prerequisites
 - torch
@@ -68,6 +68,8 @@ Here is the [demo](https://youtu.be/XZx6ZvSOUw0) of GUI.
   - h5py
   - joblib
   - tkinter
+  
+A good guide on installation can be found [here](https://github.com/jcjohnson/neural-style/blob/master/INSTALL.md).
   
 The code is tested by Python2.7 and the lasted conda.  
 
