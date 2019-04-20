@@ -38,7 +38,7 @@ python generate.py --n_jobs 30 --n_colors 4 --style_image style_image_path --sty
 ```
 Example:
 ```
-python generate.py --n_jobs 30 --n_colors 4 --style_image Styles/Monet.png --style_mask Style/Monet_mask.png --out_hdf5 Monet.hdf5
+python generate.py --n_jobs 30 --n_colors 4 --style_image Styles/Monet.png --style_mask Styles/Monet_mask.png --out_hdf5 Monet.hdf5
 ```
 
 ### Train the model
